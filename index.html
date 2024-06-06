@@ -9,6 +9,8 @@
 
 <body>
     create ton wallet!!
+
+    <button id="create">Create</button>
 </body>
 
 <script src="dsbridge.js"> </script>
@@ -16,6 +18,11 @@
 
 
 <script>
+
+    document.querySelector("#create").addEventListener("click", function () {
+        init()
+    })
+
     async function init(responseCallback) {
         const tonweb = new TonWeb(new TonWeb.HttpProvider('https://testnet.toncenter.com/api/v2/jsonRPC'));
 
